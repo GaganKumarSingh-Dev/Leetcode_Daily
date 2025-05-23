@@ -1,10 +1,9 @@
 class Solution {
     public void sortColors(int[] nums) {
-        int low = 0, mid = 0, high = nums.length - 1; // 3 pointers
+        int low = 0, mid = 0, high = nums.length - 1; 
 
         while (mid <= high) {
             if (nums[mid] == 0) {
-                // swapping arr[low] and arr[mid]
                 int temp = nums[low];
                 nums[low] = nums[mid];
                 nums[mid] = temp;
@@ -24,9 +23,6 @@ class Solution {
                 high--;
             }
         }
-
-        for(int k: nums) System.out.print(k + " ");
-
     }
 
 }
